@@ -1,193 +1,251 @@
 @font-face {
     font-family: 'the_historiaregular';
-    src: url('fonts/the_historia-webfont.woff2') format('woff2'),
-         url('fonts/the_historia-webfont.woff') format('woff');
+    src: url('fonts/the_historia-webfont.woff2') format('woff2'),  url('fonts/the_historia-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
-
 @font-face {
-  font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?ittpff');
-  src:  url('fonts/icomoon.eot?ittpff#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?ittpff') format('truetype'),
-    url('fonts/icomoon.woff?ittpff') format('woff'),
-    url('fonts/icomoon.svg?ittpff#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?ittpff');
+    src: url('fonts/icomoon.eot?ittpff#iefix') format('embedded-opentype'),  url('fonts/icomoon.ttf?ittpff') format('truetype'),  url('fonts/icomoon.woff?ittpff') format('woff'),  url('fonts/icomoon.svg?ittpff#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
-
 [class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
-
 .icon-email:before {
-  content: "\e900";
+    content: "\e900";
 }
 .icon-remove:before {
-  content: "\e901";
+    content: "\e901";
 }
 .icon-settings:before {
-  content: "\e902";
+    content: "\e902";
 }
 .icon-top:before {
-  content: "\e903";
+    content: "\e903";
 }
 .icon-facebook:before {
-  content: "\e904";
+    content: "\e904";
 }
 .icon-have-a-nice-day:before {
-  content: "\e905";
+    content: "\e905";
 }
 .icon-edit:before {
-  content: "\e906";
+    content: "\e906";
 }
 .icon-add-to-list:before {
-  content: "\e907";
+    content: "\e907";
 }
 html {
-  box-sizing: border-box;
-  font-size: 16px;
+    box-sizing: border-box;
+    font-size: 16px;
 }
-
 *, *:before, *:after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
-
 body, h1, h2, h3, h4, h5, h6, p, ol, ul {
-  margin: 0; font-family: 'Love Ya Like A Sister', cursive;
-  padding: 0;
-  font-weight: normal;
+    margin: 0;
+    font-family: 'Love Ya Like A Sister', cursive;
+    padding: 0;
+    font-weight: normal;
 }
-
 ol, ul {
-  list-style: none;
+    list-style: none;
 }
-
 img {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
 body {
     background-image: url(../images/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
-.page-container {display: flex;  align-items: stretch; align-content: stretch}
-.half-width {max-width: 100%; width: 50%; height: 100vh; position: relative}
-.left-side {text-align: center; display: flex;  align-items: center;
-  justify-content: center;  flex-direction: column;
-  }
-.right-side { box-shadow: -8px 0px 28px -4px rgba(0,0,0,0.75);
-text-align: center; padding: 3rem; right: 0px;
-    background-color: #1E0C02; position: fixed; overflow-y: scroll
+.page-container {
+    display: flex;
+    align-items: stretch;
+    align-content: stretch
 }
-h1 {font-family: 'the_historiaregular';
-	color: #ffc963; font-weight: normal!important;
-	font-size: 12rem;
-	}
-h1 strong { display: block;
-	font-size: 4rem; font-weight: normal!important;
-	}
-.left-divider { margin-bottom: 4rem; width: 90%; margin-top: 1rem}
-input[type=text]{background-color: #e3d9c0; max-width: 75%;
-	color: rgba(30, 12, 2, 0.529412); border-radius: 50px;
-	font-family: 'Love Ya Like A Sister', cursive; padding: 1rem 3rem;
-	font-size: 2.5rem; border: 4px solid #1e0c02;
-padding-left: 5rem
-	}
+.half-width {
+    max-width: 100%;
+    width: 50%;
+    height: 100vh;
+    position: relative
+}
+.left-side {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.right-side {
+    box-shadow: -8px 0px 28px -4px rgba(0,0,0,0.75);
+    text-align: center;
+    padding: 3rem;
+    right: 0px;
+    background-color: #1E0C02;
+    position: fixed;
+    overflow-y: scroll
+}
+h1 {
+    font-family: 'the_historiaregular';
+    color: #ffc963;
+    font-weight: normal!important;
+    font-size: 12rem;
+}
+h1 strong {
+    display: block;
+    font-size: 4rem;
+    font-weight: normal!important;
+}
+.left-divider {
+    margin-bottom: 4rem;
+    width: 90%;
+    margin-top: 1rem
+}
+input[type=text] {
+    background-color: #e3d9c0;
+    max-width: 75%;
+    color: rgba(30, 12, 2, 0.529412);
+    border-radius: 50px;
+    font-family: 'Love Ya Like A Sister', cursive;
+    padding: 1rem 3rem;
+    font-size: 2.5rem;
+    border: 4px solid #1e0c02;
+    padding-left: 5rem
+}
 .nice-day {
     background-image: url(../images/nice-day.png);
     background-repeat: no-repeat;
     background-position: 1.2rem center;
 }
-.add-to-list {background-color: #1e0c02; border-radius: 50px; font-family: 'Love Ya Like A Sister', cursive;  margin-top: .5rem;
-	color:  #e6cd9e; padding: .5rem 3rem;
-	font-size: 2rem; border: 2px solid #2e2b2a;
-	font-weight: 400; max-width: 50%; margin-bottom: 3rem;
-	line-height: 3rem;transition: all .2s
-	}
-
-.add-to-list:hover{
-    font-size: 2.2rem; cursor: pointer
+.add-to-list {
+    background-color: #1e0c02;
+    border-radius: 50px;
+    font-family: 'Love Ya Like A Sister', cursive;
+    margin-top: .5rem;
+    color: #e6cd9e;
+    padding: .5rem 3rem;
+    font-size: 2rem;
+    border: 2px solid #2e2b2a;
+    font-weight: 400;
+    max-width: 50%;
+    margin-bottom: 3rem;
+    line-height: 3rem;
+    transition: all .2s
+}
+.add-to-list:hover {
+    font-size: 2.2rem;
+    cursor: pointer
 }
 .copyright {
-	color: #7b695e; font-family: 'Open Sans', sans-serif;
-	font-size: .75rem; text-align: center;
-	font-weight: 400; width: 100%; padding: 1.5rem;
-	bottom: 0px; position: absolute}
-.icon-facebook {font-size: 2rem; display: block; margin-bottom:.5rem}
+    color: #7b695e;
+    font-family: 'Open Sans', sans-serif;
+    font-size: .75rem;
+    text-align: center;
+    font-weight: 400;
+    width: 100%;
+    padding: 1.5rem;
+    bottom: 0px;
+    position: absolute
+}
+.icon-facebook {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: .5rem
+}
 .right-side .title {
     font-family: 'Love Ya Like A Sister', cursive;
-    color: #5b4e47;  text-align: center;
-    font-size: 5.5rem; margin:  auto;
+    color: #5b4e47;
+    text-align: center;
+    font-size: 5.5rem;
+    margin: auto;
     display: inline-block;
-    font-weight: 400; margin-bottom: 4rem;
+    font-weight: 400;
+    margin-bottom: 4rem;
     padding: .5rem 1rem;
     background-image: url(../images/the-title-decor.png);
     background-repeat: repeat-x;
     background-position: center bottom;
-	}
-.list li { padding-left: 4rem; margin-bottom: 2rem;
-	display:flex; width:100%; justify-content: flex-start;  align-items: flex-start;
-	}
-.list li label{
-    color: #ffffff; text-align: left;
+}
+.list li {
+    padding-left: 4rem;
+    margin-bottom: 2rem;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.list li label {
+    color: #ffffff;
+    text-align: left;
     align-self: flex-start;
-    font-size: 2.5rem; width: 75%;
+    font-size: 2.5rem;
+    width: 75%;
     padding-bottom: 1.5rem;
     text-shadow: 0px 2px 18px rgba(34, 31, 32, 0.63);
     background-image: url(../images/list-divider.png);
     background-repeat: repeat-x;
     background-position: center bottom;
-	}
-.edit-controls {margin-left: auto; max-width: 140px}
-.list li button { background-color: transparent!important; border: none; color: #4c3b2a; font-size: 3rem; max-width: 50px!important; width: 50px; margin-left:  20px!important;}
-.delete span, .edit span {margin: 0px!important; padding: 0px!important}
+}
+.edit-controls {
+    margin-left: auto;
+    max-width: 140px
+}
+.list li button {
+    background-color: transparent!important;
+    border: none;
+    color: #4c3b2a;
+    font-size: 3rem;
+    max-width: 50px!important;
+    width: 50px;
+    margin-left: 20px!important;
+}
+.delete span, .edit span {
+    margin: 0px!important;
+    padding: 0px!important
+}
 label {
-		  cursor: pointer;
-	    display: inline-block;
-	    position: relative;
-	     /* 10 px padding right + 15px input type*/
-	    margin-right: 10px; /* margin between inputs types */
-	}
-	
-label:before {  
-	    content: "";
-	    width: 53px;
-	    height: 60px;
-	    position: absolute;  
-	    left: -70px;
-	}
-	
-input[type=checkbox] {  
-    	display: none;  
-	}
-	
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    /* 10 px padding right + 15px input type*/
+    margin-right: 10px; /* margin between inputs types */
+}
+label:before {
+    content: "";
+    width: 53px;
+    height: 60px;
+    position: absolute;
+    left: -70px;
+}
+input[type=checkbox] {
+    display: none;
+}
 .list label:before {
     background-repeat: no-repeat;
     background-position: left center no-repeat;
     background-image: url(../images/checkbox.png);
-    margin-top: 2px; 
-	}
+    margin-top: 2px;
+}
 input[type=checkbox]:checked + label {
-    text-decoration: line-through;    
-	} 
-	
+    text-decoration: line-through;
+}
 input[type=checkbox]:checked + label:before {
     background-repeat: no-repeat;
     background-position: left center no-repeat;
     background-image: url(../images/checkbox-checked.png);
-	} 
+}
