@@ -48,3 +48,34 @@
 .icon-add-to-list:before {
   content: "\e907";
 }
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+body {
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.page-container {display: flex;  align-items: stretch; align-content: stretch}
+.half-width {max-width: 100%; width: 50%; height: 100vh}
+.half-width .right-side {background-color: rgba(30, 12, 2, 0.9);}
