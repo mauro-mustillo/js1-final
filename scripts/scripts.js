@@ -1,6 +1,6 @@
-console.log();
-let emailInput = document.forms.addItem.addToDo;
-let myPTag = document.querySelector('#data_binder');
+
+let emailInput = document.form.addItem.addToDo;
+let myPTag = document.querySelector('#data_binding');
 emailInput.addEventListener('keyup', e => {
-	console.log(e.keyCode);
+	myPTag.textContent = e.target.value;
 });
