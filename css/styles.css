@@ -203,7 +203,7 @@ input[type=text] {
 	transition: all .3s
 }
 .list li label:hover {
- font-size: 3rem; color: #1C0D03
+ font-size: 3rem; color: #ffc963;
     
 }
 .edit-controls {
