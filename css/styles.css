@@ -200,6 +200,12 @@ input[type=text] {
     background-image: url(../images/list-divider.png);
     background-repeat: repeat-x;
     background-position: center bottom;
+	transition: all .3s
+}
+.list li label:hover {
+    
+    font-size: 3rem;
+    
 }
 .edit-controls {
     margin-left: auto;
