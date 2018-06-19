@@ -118,7 +118,7 @@ h1 strong {
 }
 input[type=text] {
     background-color: #e3d9c0;
-    max-width: 75%;
+    max-width: 90%;
     color: rgba(30, 12, 2, 0.529412);
     border-radius: 50px;
     font-family: 'Love Ya Like A Sister', cursive;

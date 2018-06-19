@@ -1,5 +1,9 @@
-let emailInput = document.addToDo;
-let myPTag = document.querySelector('#data_binding');
-emailInput.addEventListener('keyup', e => {
-	myPTag.textContent = e.target.value;
-});
+let user = {
+	name: "Henry"};
+
+function logMyName() {
+	this.name = "Donna";
+	console.log(user.name, this.user.name);
+}
+
+logMyName();
