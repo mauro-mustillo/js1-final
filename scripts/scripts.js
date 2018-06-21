@@ -24,7 +24,7 @@ document.querySelector(".add-to-list").addEventListener("click", function () {
 
 		listItem.appendChild(checkbox); // Add Checkbox to li
 		listItem.appendChild(label); // Add LABEL to li	 	
-*/dc
+
 		let edit = document.createElement('div'); // Create DIV for EDIT AREA
 		edit.className = "edit-control"; // Set CLASS for EDIT AREA div
 		edit.innerHTML = '<button class="edit"><span class="icon-edit"></span></button><button class="delete" onclick="removeMe()"><span class="icon-remove"></span></button>'; // Code for EDIT AREA
