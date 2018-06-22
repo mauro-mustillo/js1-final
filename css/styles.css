@@ -237,7 +237,7 @@ padding-left: 4rem;
 .list li::before  {
     max-width: 75%;
     height: 50px!important;
-    width: 75%;
+    width: 75%;  opacity: .4;
     content: " ";
     display: block;
     background-image: url(../images/list-divider.png);

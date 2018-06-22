@@ -24,11 +24,10 @@ document.querySelector(".add-to-list").addEventListener("click", function () {
 		var lastItem = CreatedToDos.pop(); // Grab last item from array ==
 		var listItem = document.createElement("li"); // Create LI item
 		listItem.className = "unchecked";
-		listItem.onclick = "closebtns";
 		var text = document.createTextNode(lastItem); // Create LI content based on Array
 		let edit = document.createElement('div'); // Create DIV for EDIT AREA
 		edit.className = "edit-control"; // Set CLASS for EDIT AREA div
-		edit.innerHTML = '<button class="archive"><span class="icon-archive"></span></button><button class="edit"><span class="icon-edit"></span></button><button class="delete" onclick="removeMe()"><span class="icon-remove"></span></button>'; // Code for EDIT AREA
+		edit.innerHTML = '<button class="archive"><span class="icon-archive"></span></button><button class="edit"><span class="icon-edit"></span></button><button class="delete" onclick="deleteTodoItem()"><span class="icon-remove"></span></button>'; // Code for EDIT AREA
 		listItem.appendChild(edit); //Add EDIT AREA to li 	
 		listItem.appendChild(text); //Place TEXT inside LI
 		document.querySelector(".list").appendChild(listItem); //Place LI inside UL
@@ -48,6 +47,19 @@ list.addEventListener('click', function (ev) {
 		ev.target.classList.toggle('checked');
 	}
 }, false);
+
+// delete button
+
+function deleteTodoItem(event) {
+    let node = event.target.parentNode; //well done!
+    let parentLi = node.parentNode;
+    let deleteDaItem = confirm("Are you sure you would like to delete this item?");
+    if (deleteDaItem == true) {
+        parentLi.parentNode.removeChild(parentLi);
+    } 
+};
+
+
 
 // Hate this but just for the extras :)
 let advertisement = "Are You Enjoying this App?";
