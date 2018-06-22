@@ -24,6 +24,11 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+.icon-archive:before {
+  content: "\e908";
+}
+
 .icon-email:before {
     content: "\e900";
 }
@@ -200,7 +205,7 @@ input[type=text] {
     width: 40px;
     margin-left: 10px!important;
 }
-.delete span, .edit span {
+.delete span, .edit span,  .archive span  {
     margin: 0px!important;
     padding: 0px!important
 }
@@ -209,7 +214,7 @@ input[type=text] {
     color: #AA0707;
     cursor: pointer
 }
-.edit:hover {
+.edit:hover, .archive:hover {
     color: #D0C6C1;
     cursor: pointer
 }

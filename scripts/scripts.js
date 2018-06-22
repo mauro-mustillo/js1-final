@@ -28,7 +28,7 @@ document.querySelector(".add-to-list").addEventListener("click", function () {
 		var text = document.createTextNode(lastItem); // Create LI content based on Array
 		let edit = document.createElement('div'); // Create DIV for EDIT AREA
 		edit.className = "edit-control"; // Set CLASS for EDIT AREA div
-		edit.innerHTML = '<button class="edit"><span class="icon-edit"></span></button><button class="delete" onclick="removeMe()"><span class="icon-remove"></span></button>'; // Code for EDIT AREA
+		edit.innerHTML = '<button class="archive"><span class="icon-archive"></span></button><button class="edit"><span class="icon-edit"></span></button><button class="delete" onclick="removeMe()"><span class="icon-remove"></span></button>'; // Code for EDIT AREA
 		listItem.appendChild(edit); //Add EDIT AREA to li 	
 		listItem.appendChild(text); //Place TEXT inside LI
 		document.querySelector(".list").appendChild(listItem); //Place LI inside UL
