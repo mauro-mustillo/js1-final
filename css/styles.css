@@ -203,7 +203,7 @@ input[type=text] {
     font-size: 2rem;
     max-width: 40px!important;
     width: 40px;
-    margin-left: 10px!important;
+    margin-left: 5px!important;
 }
 .delete span, .edit span,  .archive span  {
     margin: 0px!important;
