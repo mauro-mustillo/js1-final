@@ -110,3 +110,15 @@ let advertisement = "I hate this too...but it's to implement all things learned!
 setTimeout(() => {
 	alert(advertisement);
 }, 30000);
+
+
+// ================================== Move Copyright
+
+let copyrightDiv = document.querySelector('.copyright');
+if (window.width < 768){
+	let leftSide = document.querySelector('.left-side');
+	let rightSide= document.querySelector('.right-side');
+	copyrightDiv.insertBefore(rightSide, leftSide);
+} else {
+	
+}
