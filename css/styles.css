@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'the_historiaregular';
-    src: url('fonts/the_historia-webfont.woff2') format('woff2'),  url('fonts/the_historia-webfont.woff') format('woff');
+    src: url('fonts/cheddargothic-sans-webfont.woff2') format('woff2'),  url('fonts/cheddargothic-sans-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -112,7 +112,7 @@ h1 {
     font-size: 12rem;
 }
 h1 strong {
-    display: block;
+    display: block; margin-bottom: -1rem;
     font-size: 4rem;
     font-weight: normal!important;
 }
@@ -123,7 +123,7 @@ h1 strong {
 }
 input[type=text] {
     background-color: #e3d9c0;
-    max-width: 90%;
+    max-width: 90%; width: 100%!important;
     color: rgba(30, 12, 2, 0.529412);
     border-radius: 50px;
     font-family: 'Love Ya Like A Sister', cursive;
@@ -173,8 +173,7 @@ input[type=text] {
     margin-bottom: .5rem
 }
 .right-side .title {
-    font-family: 'Love Ya Like A Sister', cursive;
-    color: #5b4e47;
+font-family: 'the_historiaregular';    color: #5b4e47;
     text-align: center;
     font-size: 5.5rem;
     margin: auto;

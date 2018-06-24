@@ -28,8 +28,9 @@ document.querySelector(".add-to-list").addEventListener("click", function () {
 		let edit = document.createElement('div'); // Create DIV for EDIT AREA
 		edit.className = "edit-control"; // Set CLASS for EDIT AREA div
 		edit.innerHTML = '<button class="archive"><span class="icon-archive"></span></button><button class="edit"><span class="icon-edit"></span></button><button class="delete"> <span class="icon-remove"></span></button>'; // Code for EDIT AREA
-		listItem.appendChild(edit); //Add EDIT AREA to li 	
-		listItem.appendChild(text); //Place TEXT inside LI
+		listItem.appendChild(edit); //Add EDIT AREA to li 
+		listItem.appendChild(text); //Place TEXT inside P
+		
 		document.querySelector(".list").appendChild(listItem); //Place LI inside UL
 
 
@@ -60,24 +61,24 @@ list.addEventListener('click', function (ev) {
  		if (deleteConfirmation === true) {
  			var deleteYes = event.target;
  			deleteYes.parentNode.parentNode.parentNode.remove(); // button.div.li
-
-
- 		} else {
-
+ 		} else { // Do Nothing!
  		}
 
  	}
  });
-// ================================== Archive Button
+// ================================== Edit Button
 
-/*
+
  document.querySelector(".list").addEventListener("click", function (e) {
 
-	if (e.target && e.target.matches(".icon-archive")) {
+	if (e.target && e.target.matches(".icon-edit")) {
 	
-	var archiveConfirmation= confirm("Are you sure you want to ARCHIVE this task?");
+	var archiveConfirmation= confirm("Are you sure you want to EDIT this task?");
 		if (archiveConfirmation === true) {
-			
+			var editInput = prompt("what's your New Text for this Task");
+			var archiveYes = event.target;
+ 			archiveYes.parentNode.parentNode.parentNode.innerHTML = editInput + '<div class="edit-control"><button class="archive"><span class="icon-archive"></span></button><button class="edit"><span class="icon-edit"></span></button><button class="delete"> <span class="icon-remove"></span></button></div>';
+
 		} else {
 			
 		}
@@ -85,7 +86,7 @@ list.addEventListener('click', function (ev) {
 	}
 });
 
-// ================================== Data Storage
+/* / ================================== Data Storage
 
 let archive = [];
 
@@ -105,7 +106,7 @@ archiveBtn.addEventListener('click', e => {
 */
 
 // ================================== Timers
-let advertisement = "Are You Enjoying this App?";
+let advertisement = "I hate this too...but it's to implement all things learned!";
 setTimeout(() => {
 	alert(advertisement);
 }, 30000);
