@@ -234,15 +234,15 @@ padding-left: 4rem;
     background-position: left center no-repeat;;
 	transition: all .3s
 }
-.list li::before  {
+.list li::after  {
     max-width: 75%;
-    height: 50px!important;
+    height: 20px!important;
     width: 75%;  opacity: .4;
     content: " ";
     display: block;
     background-image: url(../images/list-divider.png);
     background-repeat: repeat-x;
-    margin-top: 30px;
+    margin-top: 0px;
     background-position: center bottom;
     transition: all .3s;
     position: absolute

@@ -27,7 +27,7 @@ document.querySelector(".add-to-list").addEventListener("click", function () {
 		var text = document.createTextNode(lastItem); // Create LI content based on Array
 		let edit = document.createElement('div'); // Create DIV for EDIT AREA
 		edit.className = "edit-control"; // Set CLASS for EDIT AREA div
-		edit.innerHTML = '<button class="archive"><span class="icon-archive"></span></button><button class="edit"><span class="icon-edit"></span></button><button class="delete" onclick="deleteTodoItem()"><span class="icon-remove"></span></button>'; // Code for EDIT AREA
+		edit.innerHTML = '<button class="archive"><span class="icon-archive"></span></button><button class="edit"><span class="icon-edit"></span></button><button class="delete"> <span class="icon-remove"></span></button>'; // Code for EDIT AREA
 		listItem.appendChild(edit); //Add EDIT AREA to li 	
 		listItem.appendChild(text); //Place TEXT inside LI
 		document.querySelector(".list").appendChild(listItem); //Place LI inside UL
@@ -40,7 +40,8 @@ document.querySelector(".add-to-list").addEventListener("click", function () {
 	}
 });
 
-// Add a "checked" symbol when clicking on a list item
+// ================================== Check / Uncheck Effect
+
 var list = document.querySelector('ul');
 list.addEventListener('click', function (ev) {
 	if (ev.target.tagName === 'LI') {
@@ -48,20 +49,62 @@ list.addEventListener('click', function (ev) {
 	}
 }, false);
 
-// delete button
-
-function deleteTodoItem(event) {
-    let node = event.target.parentNode; //well done!
-    let parentLi = node.parentNode;
-    let deleteDaItem = confirm("Are you sure you would like to delete this item?");
-    if (deleteDaItem == true) {
-        parentLi.parentNode.removeChild(parentLi);
-    } 
-};
+// ================================== Delete Button
 
 
+ document.querySelector(".list").addEventListener("click", function (e) {  //select parent item if not yet created LI
 
-// Hate this but just for the extras :)
+ 	if (e.target && e.target.matches(".icon-remove")) {  // triggers the event when the click is on icon area
+
+ 		var deleteConfirmation = confirm("Are you sure you want to DELETE this great task?");
+ 		if (deleteConfirmation === true) {
+ 			var deleteYes = event.target;
+ 			deleteYes.parentNode.parentNode.parentNode.remove(); // button.div.li
+
+
+ 		} else {
+
+ 		}
+
+ 	}
+ });
+// ================================== Archive Button
+
+/*
+ document.querySelector(".list").addEventListener("click", function (e) {
+
+	if (e.target && e.target.matches(".icon-archive")) {
+	
+	var archiveConfirmation= confirm("Are you sure you want to ARCHIVE this task?");
+		if (archiveConfirmation === true) {
+			
+		} else {
+			
+		}
+		
+	}
+});
+
+// ================================== Data Storage
+
+let archive = [];
+
+function ArchivedEvent(toDoItem) {
+	this.toDoItem = toDoItem;
+}
+
+let archiveBtn = document.querySelector('.archive');
+
+archiveBtn.addEventListener('click', e => {
+	e.preventDefault();
+	let archiveItem = new Archive('some');
+	archive.push(archiveItem);
+	localStorage.setItem('archiveItem', JSON.stringify(archiveItem));
+});
+
+*/
+
+// ================================== Timers
 let advertisement = "Are You Enjoying this App?";
 setTimeout(() => {
 	alert(advertisement);
