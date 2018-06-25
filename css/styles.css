@@ -247,7 +247,7 @@ padding-left: 5rem;
     position: absolute
 }
 
-.list li.checked p {
+.list li.checked  {
 	
     color: #ffffff;
     text-align: left;
@@ -265,6 +265,7 @@ padding-left: 5rem;
     background-position: left center no-repeat;
     background-image: url(../images/checkbox-checked.png);
 }
+.list li.checked p {text-decoration: line-through; }
 .hide {display: none!important}
 
 
