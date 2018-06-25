@@ -24,13 +24,15 @@ document.querySelector(".add-to-list").addEventListener("click", function () {
 		let lastItem = CreatedToDos.pop(); // Grab last item from array ==
 		let listItem = document.createElement("li"); // Create LI item
 		listItem.className = "unchecked";
-		
+				let listP = document.createElement("P"); // Create LI item
+
 		let text = document.createTextNode(lastItem); // Create LI content based on Array
 		let edit = document.createElement('div'); // Create DIV for EDIT AREA
 		edit.className = "edit-control"; // Set CLASS for EDIT AREA div
 		edit.innerHTML = '<button class="archive"><span class="icon-archive"></span></button><button class="edit"><span class="icon-edit"></span></button><button class="delete"> <span class="icon-remove"></span></button>'; // Code for EDIT AREA
 		listItem.appendChild(edit); //Add EDIT AREA to li 
-		listItem.appendChild(text); //Place TEXT inside P
+		listItem.appendChild(listP);
+		listP.appendChild(text); //Place TEXT inside P
 		
 		document.querySelector(".list").appendChild(listItem); //Place LI inside UL
 
@@ -75,32 +77,50 @@ list.addEventListener('click', function (ev) {
 	if (e.target && e.target.matches(".icon-edit")) {
 
 			let editInput = prompt("Edit Your Task Content Here");
+		if (editInput === '') {
+			alert("You should add some text here! let's try Again");
+		
+			
+		} else {
+		
 			let archiveYes = event.target;
  			archiveYes.parentNode.parentNode.parentNode.innerHTML = '<p>' + editInput + '</p><div class="edit-control"><button class="archive"><span class="icon-archive"></span></button><button class="edit"><span class="icon-edit"></span></button><button class="delete"> <span class="icon-remove"></span></button></div>';
 
 	
-		
+		}
 	}
 });
 
-/* / ================================== Data Storage
+ // ================================== Data Storage
 
-let archive = [];
+document.querySelector(".list").addEventListener("click", function (e) { //select parent item if not yet created LI
 
-function ArchivedEvent(toDoItem) {
-	this.toDoItem = toDoItem;
-}
+	if (e.target && e.target.matches(".icon-archive")) { // triggers the event when the click is on icon area
 
-let archiveBtn = document.querySelector('.archive');
+		let archiveConfirmation = confirm("Are you sure you want to ARCHIVE this great task?");
+		if (archiveConfirmation === true) {
+			let grabTextFromList = event.target.parentNode.parentNode.parentNode; //Select LI
+			let htmlContent = grabTextFromList.innerHTML; //strips all content from LI
+			let textContent = grabTextFromList.textContent; //remove all html and leaves all text
+			archiveDb.push(textContent);
+			
 
-archiveBtn.addEventListener('click', e => {
-	e.preventDefault();
-	let archiveItem = new Archive('some');
-	archive.push(archiveItem);
-	localStorage.setItem('archiveItem', JSON.stringify(archiveItem));
+		} else { // Do Nothing!
+		}
+
+	}
 });
 
-*/
+let archiveDb = []; // array out of scoope to allow items to be added outside function
+
+localStorage.setItem("archiveDb", JSON.stringify(archiveDb));
+localStorageTheArray = JSON.parse(localStorage.getItem("archiveDb"));
+
+
+console.log(archiveDb); //[1, 2, 3]
+
+
+
 
 // ================================== Timers
 let advertisement = "I hate this too...but it's to implement all things learned!";
