@@ -247,7 +247,7 @@ padding-left: 5rem;
     position: absolute
 }
 
-.list li.checked {
+.list li.checked p {
 	
     color: #ffffff;
     text-align: left;

@@ -117,7 +117,7 @@ localStorage.setItem("archiveDb", JSON.stringify(archiveDb));
 localStorageTheArray = JSON.parse(localStorage.getItem("archiveDb"));
 
 
-console.log(archiveDb); //[1, 2, 3]
+console.log(archiveDb); 
 
 
 
