@@ -21,10 +21,11 @@ document.querySelector(".add-to-list").addEventListener("click", function () {
 	} else {
 
 		CreatedToDos.push(grabListItem); // Add items to array
-		var lastItem = CreatedToDos.pop(); // Grab last item from array ==
-		var listItem = document.createElement("li"); // Create LI item
+		let lastItem = CreatedToDos.pop(); // Grab last item from array ==
+		let listItem = document.createElement("li"); // Create LI item
 		listItem.className = "unchecked";
-		var text = document.createTextNode(lastItem); // Create LI content based on Array
+		
+		let text = document.createTextNode(lastItem); // Create LI content based on Array
 		let edit = document.createElement('div'); // Create DIV for EDIT AREA
 		edit.className = "edit-control"; // Set CLASS for EDIT AREA div
 		edit.innerHTML = '<button class="archive"><span class="icon-archive"></span></button><button class="edit"><span class="icon-edit"></span></button><button class="delete"> <span class="icon-remove"></span></button>'; // Code for EDIT AREA
@@ -43,7 +44,7 @@ document.querySelector(".add-to-list").addEventListener("click", function () {
 
 // ================================== Check / Uncheck Effect
 
-var list = document.querySelector('ul');
+let list = document.querySelector('ul');
 list.addEventListener('click', function (ev) {
 	if (ev.target.tagName === 'LI') {
 		ev.target.classList.toggle('checked');
@@ -57,7 +58,7 @@ list.addEventListener('click', function (ev) {
 
  	if (e.target && e.target.matches(".icon-remove")) {  // triggers the event when the click is on icon area
 
- 		var deleteConfirmation = confirm("Are you sure you want to DELETE this great task?");
+ 		let deleteConfirmation = confirm("Are you sure you want to DELETE this great task?");
  		if (deleteConfirmation === true) {
  			var deleteYes = event.target;
  			deleteYes.parentNode.parentNode.parentNode.remove(); // button.div.li
@@ -72,16 +73,12 @@ list.addEventListener('click', function (ev) {
  document.querySelector(".list").addEventListener("click", function (e) {
 
 	if (e.target && e.target.matches(".icon-edit")) {
-	
-	var archiveConfirmation= confirm("Are you sure you want to EDIT this task?");
-		if (archiveConfirmation === true) {
-			var editInput = prompt("what's your New Text for this Task");
-			var archiveYes = event.target;
- 			archiveYes.parentNode.parentNode.parentNode.innerHTML = editInput + '<div class="edit-control"><button class="archive"><span class="icon-archive"></span></button><button class="edit"><span class="icon-edit"></span></button><button class="delete"> <span class="icon-remove"></span></button></div>';
 
-		} else {
-			
-		}
+			let editInput = prompt("Edit Your Task Content Here");
+			let archiveYes = event.target;
+ 			archiveYes.parentNode.parentNode.parentNode.innerHTML = '<p>' + editInput + '</p><div class="edit-control"><button class="archive"><span class="icon-archive"></span></button><button class="edit"><span class="icon-edit"></span></button><button class="delete"> <span class="icon-remove"></span></button></div>';
+
+	
 		
 	}
 });
@@ -114,11 +111,4 @@ setTimeout(() => {
 
 // ================================== Move Copyright
 
-let copyrightDiv = document.querySelector('.copyright');
-if (window.width < 768){
-	let leftSide = document.querySelector('.left-side');
-	let rightSide= document.querySelector('.right-side');
-	copyrightDiv.insertBefore(rightSide, leftSide);
-} else {
-	
-}
+
