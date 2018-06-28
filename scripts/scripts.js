@@ -1,5 +1,5 @@
 //Prevent KeyPress to Send Form
-window.addEventListener('keydown', function (e) {
+window.addEventListener('keydown', function (e) { //Well done here, Mauro! -RJH
 	if (e.keyIdentifier === 'U+000A' || e.keyIdentifier === 'Enter' || e.keyCode === 13) {
 		if (e.target.nodeName === 'INPUT' && e.target.type === 'text') {
 			e.preventDefault();
@@ -10,14 +10,14 @@ window.addEventListener('keydown', function (e) {
 
 //grab text from input and Create LI
 
-let CreatedToDos = []; //create array from Submissions
+let CreatedToDos = []; //create array from Submissions //remember camelCasing -RJH
 
 
 
 document.querySelector(".add-to-list").addEventListener("click", function () {
 	const grabListItem = document.forms.addItems.addToDo.value; // Grab string from INPUT 
 	if (grabListItem === '') {
-		alert('Please add something to list'); // Alert if nothing is TYPED
+		alert('Please add something to list'); // Alert if nothing is TYPED //Good edge casing here! -RJH
 	} else {
 
 		CreatedToDos.push(grabListItem); // Add items to array
@@ -34,7 +34,7 @@ document.querySelector(".add-to-list").addEventListener("click", function () {
 		listItem.appendChild(listP);
 		listP.appendChild(text); //Place TEXT inside P
 		
-		document.querySelector(".list").appendChild(listItem); //Place LI inside UL
+		document.querySelector(".list").appendChild(listItem); //Place LI inside UL //Nice job here! -RJH
 
 
 
@@ -60,11 +60,11 @@ list.addEventListener('click', function (ev) {
 
  	if (e.target && e.target.matches(".icon-remove")) {  // triggers the event when the click is on icon area
 
- 		let deleteConfirmation = confirm("Are you sure you want to DELETE this great task?");
+ 		let deleteConfirmation = confirm("Are you sure you want to DELETE this great task?"); //Good edge casing -RJH
  		if (deleteConfirmation === true) {
  			var deleteYes = event.target;
  			deleteYes.parentNode.parentNode.parentNode.remove(); // button.div.li
- 		} else { // Do Nothing!
+ 		} else { // Do Nothing! //You can just leave the }else{} off in this case, or return
  		}
 
  	}
@@ -105,7 +105,7 @@ document.querySelector(".list").addEventListener("click", function (e) { //selec
 			archiveDb.push(textContent);
 			
 
-		} else { // Do Nothing!
+		} else { // Do Nothing! //Again. you can leave this off :) -RJH
 		}
 
 	}
@@ -114,16 +114,16 @@ document.querySelector(".list").addEventListener("click", function (e) { //selec
 let archiveDb = []; // array out of scoope to allow items to be added outside function
 
 localStorage.setItem("archiveDb", JSON.stringify(archiveDb));
-localStorageTheArray = JSON.parse(localStorage.getItem("archiveDb"));
+localStorageTheArray = JSON.parse(localStorage.getItem("archiveDb")); //Good use of localStorage -RJH
 
-
+//Are you using this archived info to save after refresh? It doesn't seem to be working if so -RJH
 console.log(archiveDb); 
 
 
 
 
 // ================================== Timers
-let advertisement = "I hate this too...but it's to implement all things learned!";
+let advertisement = "I hate this too...but it's to implement all things learned!"; //HAHAHA!! Good stuff! -RJH
 setTimeout(() => {
 	alert(advertisement);
 }, 30000);
